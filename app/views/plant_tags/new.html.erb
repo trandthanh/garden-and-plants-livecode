@@ -1,0 +1,8 @@
+<div class="container mt-5">
+  <h1>Create a new plant tag</h1>
+
+  <%= simple_form_for [@plant, @plant_tag] do |f| %>
+    <%= f.association :tag, input_html: { multiple: true, data: { controller: "select2" } }, include_hidden: false %>
+    <%= f.submit "Create plant tag" %>
+  <% end %>
+</div>
